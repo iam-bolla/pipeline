@@ -10,12 +10,12 @@ stage('Run') {
         }
         sh '''
             cd multi-stage-multi-agent
-            if [ ! -f target/classes/com/example/HelloWorld.class ]; then
+            if [ ! -f target/classes/com/sravya/HelloWorld.class ]; then
                 echo "Compiled class not found!"
                 ls -R target
                 exit 1
             fi
-            java -cp target/classes com.example.HelloWorld
+            java -cp target/classes com.sravya.HelloWorld
         '''
     }
 }
